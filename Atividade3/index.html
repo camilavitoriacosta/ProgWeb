@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Paint</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="tools-board">
+        <div class="row">
+          <label class="title"> Formas </label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <img src="src/img/rectangle.svg" alt="retangulo" />
+              <span> Retangulo </span>
+            </li>
+            <li class="option tool" id="circle">
+              <img src="src/img/circle.svg" alt="circulo" />
+              <span> Circulo </span>
+            </li>
+            <li class="option tool" id="line">
+              <img src="src/img/line.svg" alt="linha" />
+              <span> Linha </span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color" />
+              <label for="fill-color"> Fill color </label>
+            </li>
+          </ul>
+          <div class="row">
+            <label class="title"> Opções </label>
+            <ul class="options">
+              <li class="option tool active" id="brush">
+                <img src="src/img/brush.svg" alt="pincel" />
+                <span> Pincel </span>
+              </li>
+              <li class="option tool" id="eraser">
+                <img src="src/img/eraser.svg" alt="Borracha" />
+                <span> Borracha </span>
+              </li>
+              <li class="option tool" id="bucket">
+                <img src="src/img/paint-bucket.svg" alt="balde de tinta" />
+                <span> Balde de tinta </span>
+              </li>
+              <li class="option">
+                <input
+                  type="range"
+                  id="size-slider"
+                  min="1"
+                  max="30"
+                  value="5"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="row colors">
+            <label class="title"> Cores </label>
+            <ul class="options">
+              <li class="option selected color-black"></li>
+              <li class="option color-red"></li>
+              <li class="option color-blue"></li>
+              <li class="option color-green"></li>
+              <li class="option">
+                <input type="color" id="color-picker" value="#4A98F7" />
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <ul class="options">
+              <li class="option tool" id="text">
+                <img src="src/img/file-font.svg" alt="texto" />
+                <span> Texto </span>
+              </li>
+            </ul>
+            <textarea id="texto"> </textarea>
+          </div>
+          <div class="row">
+            <button class="clear-canvas">Limpar Quadro</button>
+          </div>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+  </body>
+</html>
