@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 01 - Conversor de Real para Dolar</title>
+    <script src="exercicio01.js" defer></script>
+  </head>
+  <body>
+    <!-- campo para colocar a cotação do dólar e outro o valor em reais a ser convertido e um botão com o texto converter -->
+    <div class="container">
+      <label for="cotacaoDolar">Cotação do Dolar: </label>
+      <input type="number" id="cotacaoDolar" />
+      <label for="real"> Valor em Reais: </label>
+      <input type="number" id="real" />
+      <button onclick="calcular()">Converter</button>
+    </div>
+    <div class="container">
+      <span class="resultado">Resultado:</span>
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9fd0d6;
+    padding: 10px;
+  }
+  .resultado {
+    width: 640px;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  input {
+    margin:5px 4px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #9fd0d6;
+    background: #ffffff;
+  }
+  button {
+    margin: 5px 0 ;
+    padding: 6px;
+    border-radius: 5px;
+    background: #127e91;
+    border: 1px solid #9fd0d6;
+    color: white;
+  }
+</style>
