@@ -1,0 +1,71 @@
+<!-- calculadora usando javascript, sua calculadora deve ser capaz de realizar
+as seguintes operações : multiplicação, divisão, soma, subtração, fatorial, raiz
+quadrada e exponenciação. Além disso, sua calculadora deve ter a interface com
+botões com os números de 0 a 9, um botão para cada operação e um botão com o
+símbolo = que mostra os resultados -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 04 - Calculadora</title>
+    <link rel="stylesheet" href="exercicio04.css" />
+    <script src="exercicio04.js" defer></script>
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="visor"></div>
+      <div class="teclado">
+        <table>
+          <tr>
+            <td colspan="2"><button onclick="limpar()">CE</button></td>
+            <td><button onclick="inserir('+')">+</button></td>
+            <td><button onclick="inserir('-')">-</button></td>
+            <td><button onclick="inserir('/')">/</button></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="inserir('7')">7</button>
+            </td>
+            <td>
+              <button onclick="inserir('8')">8</button>
+            </td>
+            <td>
+              <button onclick="inserir('9')">9</button>
+            </td>
+            <td><button onclick="inserir('*')">*</button></td>
+            <td><button onclick="inserir('^')">^</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inserir('4')">4</button></td>
+            <td>
+              <button onclick="inserir('5')">5</button>
+            </td>
+            <td>
+              <button onclick="inserir('6')">6</button>
+            </td>
+            <td><button onclick="inserir('!')">!</button></td>
+            <td><button onclick="inserir('√')">√</button></td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="inserir('1')">1</button>
+            </td>
+            <td>
+              <button onclick="inserir('2')">2</button>
+            </td>
+            <td>
+              <button onclick="inserir('3')">3</button>
+            </td>
+            <td>
+              <button onclick="inserir('0')">0</button>
+            </td>
+            <td><button onclick="calcular()">=</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
