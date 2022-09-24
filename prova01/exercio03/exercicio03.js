@@ -10,10 +10,10 @@
 // decrescente pela data, exibir o produto mais vendido, o produto mais caro, o produto com
 // maior faturamento.
 
-const divOrdenado = document.querySelector(".ordenado");
-const divProdutoMaisCaro = document.querySelector(".maisCaro");
-const divProdutoMaisVendido = document.querySelector(".maisVendido");
-const divProdutoMaiorFaturamento = document.querySelector(".maiorFaturamento");
+const secaoProdutosOrdenados = document.querySelector(".ordenado");
+const secaoOutrosParametros = document.querySelector(".outrosParametros");
+// const divProdutoMaisVendido = document.querySelector(".maisVendido");
+// const divProdutoMaiorFaturamento = document.querySelector(".maiorFaturamento");
 
 let texto;
 let produtoMaisCaro;
@@ -28,9 +28,9 @@ function calcular() {
     texto = document.querySelector("#csv").value.split(",");
     for (let index = 0, i = 0; index < texto.length; index += 3, i++) {
         produtos[i] = {
-            "nome": texto[index].trim(),
-            "data": texto[index + 1],
-            "valor": texto[index + 2],
+            "data": texto[index],
+            "valor": texto[index + 1],
+            "nome": texto[index + 2].trim(),
         }
 
         if (produtoMaisCaro == null || produtos[i].valor > produtoMaisCaro.valor) {
@@ -54,10 +54,49 @@ function calcular() {
     encontrarProdutoMaisVendidoEMaiorFaturamento();
     ordernarPorDataDecrescente();
 
-    divProdutoMaisCaro.innerHTML = "Produto mais caro: " + produtoMaisCaro.nome + ", " + produtoMaisCaro.valor;
-    divProdutoMaiorFaturamento.innerHTML = "Produto com maior faturamento: " + produtoMaiorFaturamento.nome + ", " + produtoMaiorFaturamento.valor;
-    divProdutoMaisVendido.innerHTML = "Produto mais vendido: " + produtoMaisVendido.nome + ", " + produtoMaisVendido.valor;
 
+    let { thead, table, tbody } = criarTabela();
+
+    let heading = document.createElement('tr');
+    let heading_1 = criarColunaCabecalho("Categoria");
+    let heading_2 = criarColunaCabecalho("Produto");
+    let heading_3 = criarColunaCabecalho("Valor");
+
+    heading.appendChild(heading_1);
+    heading.appendChild(heading_2);
+    heading.appendChild(heading_3);
+    thead.appendChild(heading);
+
+
+    secaoOutrosParametros.appendChild(table);
+
+    criarLinhaCategoria("Mais vendido", produtoMaisVendido);
+    criarLinhaCategoria("Mais caro", produtoMaisCaro);
+    criarLinhaCategoria("Maior Faturamento", produtoMaiorFaturamento);
+
+
+    function criarLinhaCategoria(tituloCategoria, produtoCategoria) {
+        let row = document.createElement('tr');
+        row.appendChild(criarColunaTabela(tituloCategoria));
+        row.appendChild(criarColunaTabela(produtoCategoria.nome));
+        row.appendChild(criarColunaTabela(produtoCategoria.valor));
+        tbody.appendChild(row);
+    }
+}
+
+function criarColunaCabecalho(texto) {
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = texto;
+    return heading_1;
+}
+
+function criarTabela() {
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    return { thead, table, tbody };
 }
 
 function resetarResultados() {
@@ -68,10 +107,8 @@ function resetarResultados() {
     produtos = [];
     produtosVendidos = [];
 
-    divOrdenado.innerHTML = "";
-    divProdutoMaisCaro.innerHTML = "";
-    divProdutoMaisVendido.innerHTML = "";
-    divProdutoMaiorFaturamento.innerHTML = "";
+    secaoProdutosOrdenados.innerHTML = "";
+    secaoOutrosParametros.innerHTML = "";
 }
 
 
@@ -92,10 +129,36 @@ function encontrarProdutoMaisVendidoEMaiorFaturamento() {
 }
 
 function ordernarPorDataDecrescente() {
+    let { thead, table, tbody } = criarTabela();
+
+    let heading = document.createElement('tr');
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = "Data";
+    let heading_2 = document.createElement('th');
+    heading_2.innerHTML = "Produto";
+    let heading_3 = document.createElement('th');
+    heading_3.innerHTML = "Valor";
+    heading.appendChild(heading_1);
+    heading.appendChild(heading_2);
+    heading.appendChild(heading_3);
+    thead.appendChild(heading);
+
+    secaoProdutosOrdenados.appendChild(table);
+
     produtos.sort(compare);
     for (let index = 0; index < produtos.length; index++) {
-        divOrdenado.innerHTML += produtos[index].nome + ", " + produtos[index].data + ", " + produtos[index].valor + " | ";
+        let row = document.createElement('tr');
+        row.appendChild(criarColunaTabela(produtos[index].data));
+        row.appendChild(criarColunaTabela(produtos[index].nome));
+        row.appendChild(criarColunaTabela(produtos[index].valor));
+        tbody.appendChild(row);
     }
+}
+
+function criarColunaTabela(texto) {
+    let td = document.createElement('td');
+    td.innerHTML = texto;
+    return td;
 }
 
 function obterFaturamento(produto) {

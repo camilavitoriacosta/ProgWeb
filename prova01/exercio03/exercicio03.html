@@ -9,15 +9,57 @@
   </head>
   <body>
     <div class="container">
-      <textarea name="csv" id="csv" cols="50" rows="10"></textarea>
-      <!-- <textarea name="csv" id="csv" cols="50" rows="10">p1, 25/09/22, 20, p2, 24/08/22, 50, p1, 28/07/22, 20</textarea> -->
-      <button onclick="calcular()">Calcular</button>
-      <div class="resultado">
-        <div class="ordenado"></div>
-        <div class="maisVendido"></div>
-        <div class="maisCaro"></div>
-        <div class="maiorFaturamento"></div>
+      <h1>Exercicio 03 - CSV PRODUTOS</h1>
+      <div class="especificacoes">
+        <span>
+          Especifique os dados no seguinte formato: data (dia/mês/ano), valor
+          (valor em reais com centavos separados por .), nome do produto.
+        </span>
       </div>
+
+      <textarea name="csv" id="csv" cols="50" rows="10"></textarea>
+      <!-- <textarea name="csv" id="csv" cols="50" rows="10">25/09/22, 20, produto01, 24/08/22, 50, produto02, 28/07/22, 20, produto01, 29/02/20, 100, produto03</textarea> -->
+      <button onclick="calcular()">Calcular</button>
+    </div>
+    <div class="resultado">
+      <section class="ordenado"></section>
+      <section class="outrosParametros"></section>
     </div>
   </body>
 </html>
+
+<style>
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    margin: 5px 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    justify-content: center;
+  }
+  .container button {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  section {
+    margin: 10px 0;
+  }
+  table {
+    min-width: 540px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  th,
+  td {
+    padding: 10px 20px;
+    border: 1px solid #000;
+  }
+</style>
