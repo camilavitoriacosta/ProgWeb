@@ -8,11 +8,7 @@ function limpar() {
     visor.innerHTML = "";
 }
 
-function ehOperador(caractere) {
-    return caractere == '+' || caractere == '-' || caractere == '*' || caractere == '/' || caractere == '^' || caractere == '!' || caractere == '√';
-}
-
-let conta = [];
+let conta = "";
 let numero = "";
 let posicaoUltimaOperacao = -1;
 
@@ -23,7 +19,6 @@ function calcular() {
     for (let index = 0; index < operacao.length; index++) {
         // operacoes com dois numeros
         if (operacao[index] == "+" || operacao[index] == '-' || operacao[index] == '*' || operacao[index] == "/") {
-
             if (raiz) {
                 calcularRaizQuadrada(numero);
                 raiz = false;
@@ -78,18 +73,10 @@ function calcular() {
 }
 
 function resolverCalculo() {
-    let resultado = 0;
-    if (conta.length === 1) {
-        resultado = conta[0];
-    }
-    else {
-        resultado = eval(conta);
-    }
+    visor.innerHTML = eval(conta);
 
-    visor.innerHTML = resultado;
-    resultado = 0;
-    conta = [];
-
+    // limpar variaveis
+    conta = "";
     numero = "";
     posicaoUltimaOperacao = -1;
 }
