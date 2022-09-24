@@ -25,12 +25,39 @@ let produtosVendidos = [];
 
 function calcular() {
     resetarResultados(); //resetar variaveis e html
-    mapearProdutos(); //mapear itens
+    texto = document.querySelector("#csv").value.split(",");
+    for (let index = 0, i = 0; index < texto.length; index += 3, i++) {
+        produtos[i] = {
+            "nome": texto[index].trim(),
+            "data": texto[index + 1],
+            "valor": texto[index + 2],
+        }
+
+        if (produtoMaisCaro == null || produtos[i].valor > produtoMaisCaro.valor) {
+            produtoMaisCaro = produtos[i];
+        }
+
+        // procurar elemento na lista de produtosVendidos
+        indexProduto = encontrarProduto(produtos[i]);
+
+        if (indexProduto == -1) {
+            produtosVendidos[produtosVendidos.length] = {
+                "nome": produtos[i].nome,
+                "quantidade": 1,
+                "valor": produtos[i].valor
+            }
+        }
+        else {
+            produtosVendidos[indexProduto].quantidade++;
+        }
+    }
+    encontrarProdutoMaisVendidoEMaiorFaturamento();
     ordernarPorDataDecrescente();
-    produtoMaisCaro = produtos[0];
-    encontrarProdutoMaisCaro();
-    encontrarProdutoMaisVendido();
-    encontrarProdutoMaiorFaturamento();
+
+    divProdutoMaisCaro.innerHTML = "Produto mais caro: " + produtoMaisCaro.nome + ", " + produtoMaisCaro.valor;
+    divProdutoMaiorFaturamento.innerHTML = "Produto com maior faturamento: " + produtoMaiorFaturamento.nome + ", " + produtoMaiorFaturamento.valor;
+    divProdutoMaisVendido.innerHTML = "Produto mais vendido: " + produtoMaisVendido.nome + ", " + produtoMaisVendido.valor;
+
 }
 
 function resetarResultados() {
@@ -47,77 +74,19 @@ function resetarResultados() {
     divProdutoMaiorFaturamento.innerHTML = "";
 }
 
-function obterFaturamento(produto) {
-    return produto.valor * produto.quantidade;
-}
 
-function encontrarProdutoMaiorFaturamento() {
+function encontrarProdutoMaisVendidoEMaiorFaturamento() {
+    produtoMaisVendido = produtosVendidos[0];
     produtoMaiorFaturamento = produtosVendidos[0];
     let maiorFaturamento = obterFaturamento(produtosVendidos[0]);
 
-    for (let index = 1; index < produtosVendidos.length; index++) {
-        if (obterFaturamento(produtosVendidos[index]) > maiorFaturamento) {
-            produtoMaiorFaturamento = produtosVendidos[index];
-        }
-    }
-
-    divProdutoMaiorFaturamento.innerHTML = "Produto com maior faturamento: " + produtoMaiorFaturamento.nome + ", " + produtoMaiorFaturamento.valor;
-
-}
-
-function encontrarProduto(produto) {
-    for (let j = 0; j < produtosVendidos.length; j++) {
-        if (produto.nome == produtosVendidos[j].nome) {
-            return j;
-        }
-    }
-    return -1
-}
-
-function encontrarProdutoMaisVendido() {
-    for (let i = 0; i < produtos.length; i++) {
-        // procurar elemento na lista de produtosVendidos
-        indexProduto = encontrarProduto(produtos[i]);
-
-        if (indexProduto == -1) {
-            produtosVendidos[produtosVendidos.length] = {
-                "nome": produtos[i].nome,
-                "quantidade": 1,
-                "valor": produtos[i].valor
-            }
-        }
-        else {
-            produtosVendidos[indexProduto].quantidade++;
-        }
-    }
-
-    produtoMaisVendido = produtosVendidos[0];
     for (let i = 0; i < produtosVendidos.length; i++) {
         if (produtosVendidos[i].quantidade > produtoMaisVendido.quantidade) {
             produtoMaisVendido = produtosVendidos[i];
         }
-    }
 
-    divProdutoMaisVendido.innerHTML = "Produto mais vendido: " + produtoMaisVendido.nome + ", " + produtoMaisVendido.valor;
-}
-
-function encontrarProdutoMaisCaro() {
-    for (let i = 0; i < produtos.length; i++) {
-        if (produtos[i].valor > produtoMaisCaro.valor) {
-            produtoMaisCaro = produtos[i];
-        }
-    }
-
-    divProdutoMaisCaro.innerHTML = "Produto mais caro: " + produtoMaisCaro.nome + ", " + produtoMaisCaro.data + ", " + produtoMaisCaro.valor;
-}
-
-function mapearProdutos() {
-    texto = document.querySelector("#csv").value.split(",");
-    for (let index = 0, i = 0; index < texto.length; index += 3, i++) {
-        produtos[i] = {
-            "nome": texto[index].trim(),
-            "data": texto[index + 1],
-            "valor": texto[index + 2],
+        if (obterFaturamento(produtosVendidos[i]) > maiorFaturamento) {
+            produtoMaiorFaturamento = produtosVendidos[i];
         }
     }
 }
@@ -127,6 +96,19 @@ function ordernarPorDataDecrescente() {
     for (let index = 0; index < produtos.length; index++) {
         divOrdenado.innerHTML += produtos[index].nome + ", " + produtos[index].data + ", " + produtos[index].valor + " | ";
     }
+}
+
+function obterFaturamento(produto) {
+    return produto.valor * produto.quantidade;
+}
+
+function encontrarProduto(produto) {
+    for (let j = 0; j < produtosVendidos.length; j++) {
+        if (produto.nome == produtosVendidos[j].nome) {
+            return j;
+        }
+    }
+    return -1
 }
 
 function compare(a, b) {
