@@ -1,0 +1,55 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  padding: 15px;
+}
+
+.conteudo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -15vh;
+  text-align: center;
+}
+
+.conteudo .foto img {
+  width: 250px;
+}
+
+.conteudo .apresentacao {
+  font-size: 1.25em;
+  font-weight: lighter;
+  padding-top: 15px;
+}
+
+.conteudo .apresentacao span {
+  display: block;
+  line-height: 1.5em;
+}
+
+.conteudo .apresentacao .nome {
+  font-weight: bold;
+  font-size: 1.75em;
+}
+
+@media (max-width: 500px) {
+  .conteudo .foto img {
+    width: 200px;
+  }
+
+  .conteudo .apresentacao {
+    font-size: 1.15em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
