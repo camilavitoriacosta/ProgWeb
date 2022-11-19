@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700&display=swap");
+
+:root {
+  --azul: #4498c7;
+  --azul-claro: #e8f2fb;
+  --azul-escuro: #3e5563;
+  --vermelho: #b6482d;
+}
+
+* {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  background-color: var(--azul-escuro);
+  width: 90vw;
+  height: 90vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  border-radius: 10px;
+  width: 650px;
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--azul-claro);
+  border-radius: 3px;
+
+  padding: 1em;
+  margin: 20px auto 25px auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.informacoes__label {
+  font-weight: bolder;
+  font-size: 24px;
+  color: var(--azul-escuro);
+}
+
+.informacoes__input {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: grey 0px 3px 4px 0px;
+}
+
+.btn {
+  background-color: var(--azul-escuro);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: 40px;
+}
