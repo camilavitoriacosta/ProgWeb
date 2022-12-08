@@ -1,0 +1,38 @@
+form {
+  border: none;
+  box-shadow: none;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .panel {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container .panel h1 {
+  text-align: center;
+}
+
+.container .panel input {
+  width: 25vw;
+}
+
+.container button {
+  min-width: 175px;
+  margin: 0 5vw;
+  padding: auto;
+}
