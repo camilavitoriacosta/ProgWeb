@@ -1,0 +1,2 @@
+## Atividade 01
+- Crie um pequena página usando javascript e html que converte Real para Dólar, a página deve ter um campo para colocar a cotação do dólar e outro o valor em reais a ser convertido e um botão com o texto converter, assim que o botão for clicado é para aparecer o valor convertido na página.

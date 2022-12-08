@@ -1,0 +1,2 @@
+## Atividade 03
+- Nesta atividade devesse implementar um paint com base no código dado. Ferramentas que devem ser adicionadas: circulo, balde de tinta, Texto. Para cada ferramenta as seguintes opções: Uma pequena paleta de cores (azul, vermelho,verde); Um pequeno menu aonde o usuário pode inserir o código RGB; Se o circulo/retângulo vão ser preenchidos; Espessura das linhas das ferramentas.

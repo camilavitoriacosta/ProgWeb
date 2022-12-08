@@ -1,0 +1,2 @@
+## Atividade 05
+- Nesta atividade vocês deverão ordernar um conjunto de palavras provido pelo usuário. Para isso já está pronta uma base e vocês devem simplesmente implementar a lógica de ordenação das palavras. Lembrando que o usuário pode passar quantas palavras quiserem, não necessariamente todas.

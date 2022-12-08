@@ -1,0 +1,2 @@
+## Atividade 01
+- Crie um programa em PHP que exibe os dados do exercícios 3. OBS: não é necessário ter o exercício 3 funcionando corretamente, você pode simplesmente criar um arquivo csv e com as informações descritas no exercício 3 e exibir

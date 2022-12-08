@@ -1,0 +1,2 @@
+## Atividade 02
+- Nesta atividade você deverá modificar o arquivo modelo disponibilizado para atualizá-lo com seus dados. Além de colocar seus dados, você deverá inserir a informação de quando a página foi gerada pelo servidor, fazendo uso de PHP para isso.
