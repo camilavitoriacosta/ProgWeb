@@ -6,6 +6,7 @@
   padding: 5px;
   margin: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-icon {
