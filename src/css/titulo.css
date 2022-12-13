@@ -1,0 +1,23 @@
+.titulo {
+    margin: 15px 0;
+    font-weight: bolder;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.titulo::before {
+    content: "";
+    height: 45px;
+    width: 14px;
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.titulo-verde {
+    color: var(--verde);
+}
+
+.titulo-verde::before {
+    background-color: var(--verde);
+}

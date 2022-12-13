@@ -1,0 +1,52 @@
+.conteudo {
+    margin: 40px auto;
+    width: 90%;
+}
+
+.projetos {
+    display: flex;
+    gap: 20px;
+}
+
+.card-projeto {
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: var(--branco-creme);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-projeto__video {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-projeto__tecnologias {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
+.card-projeto__tecnologia>img {
+    width: 70px;
+    height: 100%;
+}
+
+.card-projeto__titulo {
+    color: var(--roxo);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.card-projeto__descricao{
+    padding: 5px 10px;
+    text-align: justify;
+}
+
+.card-projeto .btn-icon {
+    align-self: center;
+}
