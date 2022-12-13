@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 @import url(reset.css);
+@import url(btn.css);
 
 :root {
   --branco-creme: #f7f3ed;
@@ -8,9 +9,67 @@
   --lilas: #ddcbcc;
   --roxo: #b19ba7;
   --verde: #628474;
+  --fonte: "Inter", sans-serif;
 }
 
 * {
-  font-family: "IBM Plex Sans Thai", sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--lilas);
+  font-family: var(--fonte);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: var(--branco-creme);
+  border-radius: 0.375rem;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.ano {
+  writing-mode: vertical-lr;
+  vertical-align: middle;
+  text-align: center;
+  color: var(--branco-creme);
+  width: 100%;
+  padding: 5px;
+  height: 100px;
+}
+
+.bg-verde {
+  background-color: var(--verde);
+  border-radius: 0.375rem;
+  width: 20%;
+}
+
+.informacoes {
+  color: var(--verde);
+  width: 100%;
+  padding: 10px;
+}
+
+.informacoes__nome {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.informacoes__disciplina {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.cabecalho .btn-icon {
+  align-self: flex-end;
+}
+
+.informacoes__foto {
+  width: 50px;
 }

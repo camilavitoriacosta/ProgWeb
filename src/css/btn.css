@@ -1,0 +1,21 @@
+.btn {
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
+}
+
+.btn-icon {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-roxo {
+  color: var(--branco-gelo);
+  background-color: var(--roxo);
+}
