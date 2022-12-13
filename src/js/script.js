@@ -43,7 +43,79 @@ const projetos = [
         "badges": [
             "html", "css", "php"
         ]
-    }
+    },
+    {
+        "titulo": "Prova 01 - Exercicio 01",
+        "descricao": "Crie um pequena página usando javascript e html que converte Real para Dólar.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio01",
+        "video": "src/videos/prova01_exercicio01.mp4",
+        "badges": [
+            "html", "css", "js"
+        ]
+    },
+    {
+        "titulo": "Prova 01 - Exercicio 02",
+        "descricao": "Crie uma página e com um retângulo e usando javascript faça que a cada click do mouse o quadrado mude de cor, na seguinte ordem vermelho,azul,verde,rosa,amarelo e então volte para vermelho.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio02",
+        "video": "src/videos/prova01_exercicio02.mp4",
+        "badges": [
+            "html", "css", "js"
+        ]
+    },
+    {
+        "titulo": "Prova 01 - Exercicio 03",
+        "descricao": "Sua página deve ter um botão calcular que deve exibir a lista ordenada de maneira decrescente pela data, exibir o produto mais vendido, o produto mais caro, o produto com maior faturamento.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio03",
+        "video": "src/videos/prova01_exercicio03.mp4",
+        "badges": [
+            "html", "css", "js"
+        ]
+    },
+    {
+        "titulo": "Prova 01 - Exercicio 04",
+        "descricao": "Crie uma calculadora usando javascript, sua calculadora deve ser capaz de realizar as seguintes operações : multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio04",
+        "video": "src/videos/prova01_exercicio04.mp4",
+        "badges": [
+            "html", "css", "js"
+        ]
+    },
+    {
+        "titulo": "Prova 02 - Exercicio 01",
+        "descricao": "Crie uma API rest usando php, sua api deve entregar as cotações de cada uma das moedas listadas no arquivo disponibilizado, baixe o arquivo e o use no seu projeto para as consultas da API.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio01",
+        "video": "src/videos/prova02_exercicio01.mp4",
+        "badges": [
+            "html", "css", "php"
+        ]
+    },
+    {
+        "titulo": "Prova 02 - Exercicio 02",
+        "descricao": "Crie uma calculadora usando javascript e php, sua calculadora deve ser capaz de realizar as seguintes operações : multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação. As operações devem ser computadas do lado do servidor.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio02",
+        "video": "src/videos/prova02_exercicio02.mp4",
+        "badges": [
+            "html", "css", "js", "php"
+        ]
+    },
+    {
+        "titulo": "Prova 02 - Exercicio 03",
+        "descricao": "Crie uma página em php que tenha um formulário com os seguintes campos: nome, sobrenome, cep, telefone, data de nascimento. Seu programa deve guardar esses dados em um arquivo .csv.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio03",
+        "video": "src/videos/prova02_exercicio03.mp4",
+        "badges": [
+            "html", "css", "php"
+        ]
+    },
+    {
+        "titulo": "Prova 02 - Exercicio 04",
+        "descricao": "Crie um programa em PHP que exibe os dados do exercícios 3.",
+        "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio04",
+        "video": "src/videos/prova02_exercicio04.mp4",
+        "badges": [
+            "html", "css", "php"
+        ]
+    },
 ]
 
 
