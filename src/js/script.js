@@ -19,7 +19,7 @@ const projetos = [
     },
     {
         "titulo": "Atividade 03",
-        "descricao": "Nesta atividade devesse implementar um paint com base no código dado. Ferramentas que devem ser adicionadas: circulo, balde de tinta, Texto.",
+        "descricao": "Nesta atividade devesse implementar um paint com base no código dado. Ferramentas que devem ser adicionadas: circulo, balde de tinta e texto.",
         "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/Atividades/Atividade03",
         "video": "src/videos/atividade03.mp4",
         "badges": [
@@ -55,7 +55,7 @@ const projetos = [
     },
     {
         "titulo": "Prova 01 - Exercicio 02",
-        "descricao": "Crie uma página e com um retângulo e usando javascript faça que a cada click do mouse o quadrado mude de cor, na seguinte ordem vermelho,azul,verde,rosa,amarelo e então volte para vermelho.",
+        "descricao": "Crie uma página e com um retângulo e usando javascript faça que a cada click do mouse o quadrado mude de cor, na seguinte ordem vermelho, azul, verde, rosa, amarelo e então volte para vermelho.",
         "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio02",
         "video": "src/videos/prova01_exercicio02.mp4",
         "badges": [
@@ -73,7 +73,7 @@ const projetos = [
     },
     {
         "titulo": "Prova 01 - Exercicio 04",
-        "descricao": "Crie uma calculadora usando javascript, sua calculadora deve ser capaz de realizar as seguintes operações : multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação.",
+        "descricao": "Crie uma calculadora usando javascript, sua calculadora deve ser capaz de realizar as seguintes operações: multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação.",
         "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova01/exercicio04",
         "video": "src/videos/prova01_exercicio04.mp4",
         "badges": [
@@ -91,7 +91,7 @@ const projetos = [
     },
     {
         "titulo": "Prova 02 - Exercicio 02",
-        "descricao": "Crie uma calculadora usando javascript e php, sua calculadora deve ser capaz de realizar as seguintes operações : multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação. As operações devem ser computadas do lado do servidor.",
+        "descricao": "Crie uma calculadora usando javascript e php, sua calculadora deve ser capaz de realizar as seguintes operações: multiplicação, divisão, soma, subtração, fatorial, raiz quadrada e exponenciação. As operações devem ser computadas do lado do servidor.",
         "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio02",
         "video": "src/videos/prova02_exercicio02.mp4",
         "badges": [
@@ -109,7 +109,7 @@ const projetos = [
     },
     {
         "titulo": "Prova 02 - Exercicio 04",
-        "descricao": "Crie um programa em PHP que exibe os dados do exercícios 3.",
+        "descricao": "Crie um programa em PHP que exibe os dados guardados em um arquivo .csv (exercicio 03).",
         "git": "https://github.com/camilavitoriacosta/ProgWeb/tree/master/prova02/exercicio04",
         "video": "src/videos/prova02_exercicio04.mp4",
         "badges": [
@@ -132,7 +132,7 @@ function criarCard(projeto) {
     let tecnologias = "<ul class='card-projeto__tecnologias'>"
 
     projeto.badges.forEach(badge => {
-        tecnologias += "<li class='card-projeto__tecnologia'> <img src='src/icons/badge-" + badge + ".svg' alt=''>"
+        tecnologias += "<li class='card-projeto__tecnologia'> <img src='src/icons/badge-" + badge + ".png' alt=''>"
     });
 
     let titulo = "<p class='card-projeto__titulo'>" + projeto.titulo + "</p>"

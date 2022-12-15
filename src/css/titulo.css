@@ -1,23 +1,32 @@
 .titulo {
-    margin: 15px 0;
-    font-weight: bolder;
-    font-size: 38px;
-    text-transform: uppercase;
+  margin: 15px 0;
+  font-weight: bolder;
+  font-size: 28px;
+  text-transform: uppercase;
 }
 
 .titulo::before {
-    content: "";
-    height: 45px;
-    width: 14px;
-    display: inline-block;
-    margin: 0 5px;
-    vertical-align: middle;
+  content: "";
+  height: 35px;
+  width: 14px;
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
 }
 
 .titulo-verde {
-    color: var(--verde);
+  color: var(--verde);
 }
 
 .titulo-verde::before {
-    background-color: var(--verde);
+  background-color: var(--verde);
+}
+
+@media screen and (min-width: 800px) {
+  .titulo {
+    font-size: 38px;
+  }
+  .titulo::before {
+    height: 45px;
+  }
 }

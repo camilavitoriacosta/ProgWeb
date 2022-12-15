@@ -1,39 +1,52 @@
 .cabecalho {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    background-color: var(--branco-creme);
-    border-left: 40px solid var(--verde);
-    border-radius: 5px;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+  background-color: var(--branco-creme);
+  border-left: 40px solid var(--verde);
+  border-radius: 5px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  min-width: 250px;
 }
 
 .informacoes {
-    color: var(--verde);
-    width: 100%;
-    padding: 10px;
+  color: var(--verde);
+  width: 100%;
+  padding: 10px;
 }
 
 .informacoes__nome {
-    font-weight: 700;
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .informacoes__disciplina {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.cabecalho .btn-icon {
-    align-self: flex-end;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .informacoes__foto {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 800px) {
+  .cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .informacoes__nome {
+    font-size: 28px;
+  }
+
+  .informacoes__disciplina {
+    font-size: 20px;
+  }
+
+  .cabecalho .btn-icon {
+    align-self: flex-end;
+  }
 }
